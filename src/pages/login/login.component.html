@@ -1,0 +1,22 @@
+<div class="login-div">
+  <form align="center" class="login-form" novalidate [formGroup]="loginForm">
+    <h2>{{form?.title}}</h2>
+    <input type="email" placeholder="Enter Email" [formControl]="loginForm.controls['username']" name="username" required class="login-inputs">
+    <div>
+      <span *ngIf="loginForm.controls['username'].hasError('required') && loginForm.controls['username'].touched" class="has-error">Email is required</span>
+      <span *ngIf="!loginForm.controls['username'].hasError('required') && loginForm.controls['username'].invalid" class="has-error">Invalid Email</span>
+    </div>
+    <input type="password" placeholder="Enter Password " [formControl]="loginForm.controls['password']" name="password" required
+      class="login-inputs">
+    <div>
+      <span *ngIf="loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched" class="has-error">password is required</span>
+    </div>
+    <button type="submit" class="login-button" [disabled]="loginForm.invalid" (click)="loginUser()">login</button>
+    <br>
+    <br>
+    <div align="center">
+      <button type="button" class="btn" (click)="goToRegister()">SignUp</button>
+    </div>
+    <a href="" class="forgot-passowrd">{{form?.password}}</a>
+  </form>
+</div>

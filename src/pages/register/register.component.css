@@ -1,0 +1,32 @@
+.my-form{
+    height: 70%;
+    width: 30%;
+    margin-top: 10%;
+    margin-left: 35%;
+    background-color: indianred;
+    border-radius: 3px;
+
+}
+
+.has-error-myForm{
+    color: #fff;
+}
+
+.form-input{
+    text-align: center;
+    border: none;
+    width: 70%;
+    height: 10%;
+    margin-bottom: 5%;
+
+}
+
+.form-button{
+    height: 15%;
+    width: 30%;
+    font-weight: bold;
+    background-color: skyblue;
+    border: 1px solid skyblue;
+    border-radius: 5px;
+}
+
